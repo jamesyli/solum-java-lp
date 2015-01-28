@@ -3,7 +3,7 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM ubuntu:14.04
 
 # Install Java.
 RUN \
@@ -16,6 +16,8 @@ RUN apt-get -yqq install maven
 
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
+
+ADD bin /solum/bin
 
 # Define default command.
 CMD ["bash"]
