@@ -11,6 +11,9 @@ RUN \
   apt-get -yqq install openjdk-7-jre && \
   rm -rf /var/lib/apt/lists/*
 
+# Install Tomcat
+
+
 # Install maven
 RUN apt-get -yqq install maven
 
