@@ -8,7 +8,7 @@ FROM ubuntu:14.04
 # Install Java.
 RUN \
   apt-get -yqq update && \
-  apt-get -yqq install openjdk-7-jre
+  apt-get -yqq install openjdk-7-jdk
 
 # Install Tomcat
 
@@ -20,6 +20,3 @@ RUN apt-get -yqq install maven
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
 ADD bin /solum/bin
-
-# Define default command.
-CMD ["bash"]
