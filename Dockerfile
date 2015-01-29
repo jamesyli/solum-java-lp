@@ -7,9 +7,8 @@ FROM ubuntu:14.04
 
 # Install Java.
 RUN \
-  apt-get -q update && \
-  apt-get -yqq install openjdk-7-jre && \
-  rm -rf /var/lib/apt/lists/*
+  apt-get -yqq update && \
+  apt-get -yqq install openjdk-7-jre
 
 # Install Tomcat
 
