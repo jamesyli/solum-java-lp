@@ -2,16 +2,15 @@
 # Solum Java Language Pack
 #
 
-# Pull base image.
-FROM ubuntu:14.04
+FROM dockerfile/ubuntu
 
 # Install Java.
 RUN \
-  apt-get -yqq update && \
-  apt-get -yqq install openjdk-7-jdk
+  apt-get update -yqq && \
+  apt-get install -yqq openjdk-7-jdk && \
+  rm -rf /var/lib/apt/lists/*
 
 # Install Tomcat
-
 
 # Install maven
 RUN apt-get -yqq install maven
@@ -19,4 +18,7 @@ RUN apt-get -yqq install maven
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
-ADD bin /solum/bin
+COPY bin /solum/bin
+
+# Define default command.
+CMD ["bash"]
