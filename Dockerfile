@@ -13,7 +13,7 @@ RUN \
 # Install Tomcat
 
 # Install maven
-RUN apt-get -yqq install maven
+RUN apt-get install -yqq maven
 
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
