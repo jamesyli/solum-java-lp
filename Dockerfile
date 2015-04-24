@@ -7,8 +7,7 @@ FROM dockerfile/ubuntu
 # Install Java.
 RUN \
   apt-get update -yqq && \
-  apt-get install -yqq openjdk-7-jdk && \
-  rm -rf /var/lib/apt/lists/*
+  apt-get install -yqq openjdk-7-jdk
 
 # Install Tomcat
 
