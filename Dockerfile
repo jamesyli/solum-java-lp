@@ -12,6 +12,7 @@ RUN \
 
 # Install Tomcat
 
+
 # Install maven
 RUN apt-get install -yqq maven
 
