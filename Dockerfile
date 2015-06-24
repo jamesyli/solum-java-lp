@@ -15,6 +15,9 @@ RUN \
 # Install maven
 RUN apt-get install -yqq maven
 
+# hack
+RUN useradd -s /bin/bash -u 65533 -m runner
+
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
